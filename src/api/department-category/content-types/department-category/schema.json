@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "department_categories",
+  "info": {
+    "singularName": "department-category",
+    "pluralName": "department-categories",
+    "displayName": "departmentCategory"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "departmentName": {
+      "type": "string",
+      "required": true
+    },
+    "departmentImg": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
