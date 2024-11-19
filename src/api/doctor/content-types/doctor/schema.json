@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "doctors",
+  "info": {
+    "singularName": "doctor",
+    "pluralName": "doctors",
+    "displayName": "doctor"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Patient": {
+      "type": "string"
+    },
+    "Year_of_experience": {
+      "type": "string",
+      "required": true
+    },
+    "StartTime": {
+      "type": "time",
+      "required": true
+    },
+    "EndTime": {
+      "type": "time",
+      "required": true
+    },
+    "About": {
+      "type": "blocks",
+      "required": true
+    },
+    "department_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::department-category.department-category",
+      "inversedBy": "doctors"
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Premium": {
+      "type": "boolean"
+    }
+  }
+}
